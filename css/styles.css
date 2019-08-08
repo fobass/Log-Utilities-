@@ -10,14 +10,14 @@
     .content {
 			top: 0;
       left: 60px;
-      right: -10%;
       position: relative;
       width: calc(100% - 60px);
       height: 100%;
       border: 3px solid green;
 			/* padding: 9px 0; */
       background-color: slategray;
-
+      overflow-y:auto; 
+      padding-right:9px;
   }
 		.logo img{
 			width:20px;
