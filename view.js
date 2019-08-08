@@ -13,6 +13,10 @@ let sno = 0
         console.log("nav clicked", e.currentTarget.id)
         $('#id_content').load(e.currentTarget.id + '.html');
     });
+
+    $(document).on( "click", '#test' , function() {
+        console.log("My clicked")
+    }); 
 });
 
 
@@ -66,6 +70,8 @@ $(document).ready( function() {
         console.log("Button Clicked")
     });
 });
+
+
 
 $('#test').on('click', () => {
     // loadAndDisplayContacts()
