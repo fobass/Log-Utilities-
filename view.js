@@ -11,7 +11,7 @@ let sno = 0
         $(".sidebar-menu").find("li.active").removeClass("active");
         $(e.currentTarget).parent('li').addClass("active");
         console.log("nav clicked", e.currentTarget.id)
-        $('#id_content').load(e.currentTarget.id + '.html');
+        $('#id_content').load('html/'+e.currentTarget.id + '.html');
     });
 });
 
