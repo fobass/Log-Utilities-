@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-const electron = require("electron");
+const electron = require('electron')
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
 const Menu = electron.Menu
@@ -47,7 +47,8 @@ ipc.on('somemsg', (event, args)=>{
 })
 
 function createWindow() {
-    mainWindow = new BrowserWindow({ width: 800, height: 600, show: false, frame: false });
+    mainWindow = new BrowserWindow({ width: 800, height: 600, show: false, frame: false, webPreferences: {nodeIntegration: true} });
+    
     mainWindow.loadURL(url.format({
             pathname: path.join(__dirname, 'index.html'),
             protocol: 'file:',

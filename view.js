@@ -1,5 +1,5 @@
-const {remote, ipcRenderer} = require('electron')
-const ipc = ipcRenderer
+"use strict";
+const ipc = require('electron').ipcRenderer
 const selectDirBtn = document.getElementById('select-directory')
 let $ = require('jquery')
 let fs = require('fs')
