@@ -57,9 +57,19 @@ $('#sendIPCAsync').on('click', ()=> {
     document.getElementById('respICPAsync').innerHTML = msg
     
 })
+$('#load-to1').on('click', ()=>{
+    console.log("test")
+})
 
-$('#load-to-list').on('click', () => {
-    loadAndDisplayContacts()
+$(document).ready( function() {
+    $("#load-to").on("click", function() {
+        console.log("Button Clicked")
+    });
+});
+
+$('#test').on('click', () => {
+    // loadAndDisplayContacts()
+    console.log("Button Clicked")
     // let filePath =  $('#filePath').val()
     // console.log(filePath)
     // let logfile = fs.readFile(filePath, (err, data)=>{
