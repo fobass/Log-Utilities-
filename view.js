@@ -1,7 +1,9 @@
 "use strict";
 const ipc = require('electron').ipcRenderer
+const dialog = require('electron').remote.dialog
 const selectDirBtn = document.getElementById('select-directory')
 let $ = require('jquery')
+require('datatables.net')();
 let fs = require('fs')
 let filename = '2018-11-13_Ticket.log'
 let sno = 0
@@ -14,11 +16,34 @@ let sno = 0
         $('#id_content').load('html/'+e.currentTarget.id + '.html');
     });
 
-    $(document).on( "click", '#test' , function() {
-        console.log("My clicked")
+    $(document).on( "click", '#load-file' , (e)=> {
+        dialog.showOpenDialog({
+            properties: ['openFile']
+            }, function (files) {
+            if (files) {
+                console.log(files);
+                document.getElementById('file-path').value = files
+            }
+            // event.sender.send('file-path, files')
+            })
     }); 
+
+    $(document).on('click', '#load-table', ()=>{
+        // var table = $("#dtHorizontalExample table").dataTable();
+        //         console.log(table)
+                $('#dtHorizontalExample').DataTable({
+                    "scrollX": true,
+                    "scrollY": "70vh",
+                    "scrollCollapse": true
+                });
+                $('.dataTables_length').addClass('bs-select');
+    })
+
 });
 
+ipc.on('file-path', function (event, path) {
+    document.getElementById('file-path').innerHTML = path
+})
 
 
 // $(document).on('click', ()=> {
@@ -41,6 +66,9 @@ let sno = 0
 // selectDirBtn.addEventListener('click', function (event) {
 //     ipc.send('open-directory-dialog')
 // })
+
+
+
 
 window.addEventListener('contextmenu', (event)=>{
     event.preventDefault()

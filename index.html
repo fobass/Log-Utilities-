@@ -4,15 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Log Uilities</title>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <link type="text/css" rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <!-- <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" /> -->
 </head>
 <body>
-    <div class="form-group">
-        <button class="btn btn-primary pull-right" id="load-to">Load</button>
-      </div>
     <div class="content" id="id_content"></div>
    
     <!-- sidebar -->
@@ -36,9 +32,11 @@
     <div class="footer">
     </div><!-- .footer -->
     <script src="./view.js"></script>
+    
   <div class="requester-header">
       <script>
         require('./titlebar_render.js')
+        require('./node_modules/datatables.net/js/jquery.dataTables.js')
       </script>
   </div>
 
