@@ -18,7 +18,7 @@
             <th style="width: 87px;">&nbsp;</th>
         </tr>
         <tr>
-            <td style="width: 71px;"><button class="btn btn-warning center-block custom" id="load-table">load-table</button></td>
+            <td style="width: 71px;"></td>
             <td style="width: 71px;">&nbsp;</td>
             <td style="width: 72px;">&nbsp;</td>
             <td style="width: 72px;">&nbsp;</td>
@@ -291,14 +291,13 @@
         </tbody>
     </table>
 </div>
- <!-- <script>
-        $(document).ready(function () {
-           
-            var table = $("#dtHorizontalExample").DataTable();
-            console.log(table)
-            // $('#dtHorizontalExample').DataTable({
-            //     "scrollX": true
-            // });
-            $('.dataTables_length').addClass('bs-select');
+ <script>
+    $(document).ready(function () {
+        $('#dtHorizontalExample').DataTable({
+           "scrollX": true,
+            "scrollY": "70vh",
+            "scrollCollapse": true
         });
-    </script>  -->
+    $('.dataTables_length').addClass('bs-select');
+    });
+</script> 

@@ -28,9 +28,9 @@ let sno = 0
             })
     }); 
 
+   
+
     $(document).on('click', '#load-table', ()=>{
-        // var table = $("#dtHorizontalExample table").dataTable();
-        //         console.log(table)
                 $('#dtHorizontalExample').DataTable({
                     "scrollX": true,
                     "scrollY": "70vh",
