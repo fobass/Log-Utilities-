@@ -1,5 +1,5 @@
-const {remote, ipcRenderer} = require('electron')
-const ipc = ipcRenderer
+"use strict";
+const ipc = require('electron').ipcRenderer
 const selectDirBtn = document.getElementById('select-directory')
 let $ = require('jquery')
 let fs = require('fs')
@@ -13,6 +13,10 @@ let sno = 0
         console.log("nav clicked", e.currentTarget.id)
         $('#id_content').load('html/'+e.currentTarget.id + '.html');
     });
+
+    $(document).on( "click", '#test' , function() {
+        console.log("My clicked")
+    }); 
 });
 
 
@@ -57,9 +61,21 @@ $('#sendIPCAsync').on('click', ()=> {
     document.getElementById('respICPAsync').innerHTML = msg
     
 })
+$('#load-to1').on('click', ()=>{
+    console.log("test")
+})
 
-$('#load-to-list').on('click', () => {
-    loadAndDisplayContacts()
+$(document).ready( function() {
+    $("#load-to").on("click", function() {
+        console.log("Button Clicked")
+    });
+});
+
+
+
+$('#test').on('click', () => {
+    // loadAndDisplayContacts()
+    console.log("Button Clicked")
     // let filePath =  $('#filePath').val()
     // console.log(filePath)
     // let logfile = fs.readFile(filePath, (err, data)=>{
