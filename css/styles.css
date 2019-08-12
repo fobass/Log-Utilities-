@@ -18,6 +18,7 @@
       background-color: slategray;
       overflow-y:auto; 
       padding-right:9px;
+      padding-bottom: 30px;
   }
 		.logo img{
 			width:20px;
@@ -75,3 +76,7 @@
     .custom {
       width: 80px;
   }
+
+ 
+
+  
