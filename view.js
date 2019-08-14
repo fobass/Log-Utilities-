@@ -14,7 +14,6 @@ let tabs = document.querySelector("#id_doctabs");
 $('#id_doctabs').on("open", (event, title) => {
     // Don't open the default dummy tab
     event.preventDefault();
-  
     // Create and open a new custom tab
     {
         
