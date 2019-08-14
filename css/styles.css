@@ -77,6 +77,12 @@
       width: 80px;
   }
 
+  x-doctabs {
+    --open-button-width: 0;
+    --open-button-height: 0;
+    --open-button-margin: 0;
+  }
+
  
 
   
